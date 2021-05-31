@@ -29,7 +29,7 @@ export default class PromiseAction {
   do(payload) {
     if (this.promise) {
       // consider existed promise as outdated
-      // any other action lifecicly methods will
+      // any other action lifecycle methods will
       // not be called with them
       this._resolveHandle(new PromiseActionResult(Exodus.OBSOLESCENCE));
       this.config.onObsolescence?.(this.promise, this.payload);
